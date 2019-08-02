@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Hackbright Coffee Shop</title>
+  <script></script>
 
   <!-- Bootstrap links -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -16,7 +17,7 @@
     <div class="starter-template">
       <h1>Coffee Shop</h1>
 
-      <img
+      <img 
         id="coffee-image"
         alt="make this image work with js"
         height="300"
@@ -55,20 +56,26 @@
 
     // Set these variables to their DOM elements
 
-    const coffeeImage;
-    const revenueMessage;
+const coffeeImages = document.querySelector('#coffee-image');
 
-    // use this JavaScript object in further study step
+coffeeImages.setAttribute('src', 'static/coffee_beans.jpg');
 
-    const prices = {
-      'brew': 2.05,
-      'espresso': 3.25,
-      'latte': 4.15,
-      'hot chocolate': 2.50
-    };
+// use this JavaScript object in further study step
 
+const prices = { // eslint-disable-line
+  'brew': 2.05,
+  'espresso': 3.25,
+  'latte': 4.15,
+  'hot chocolate': 2.50
+};
 
-  </script>
+function makeCoffee() {
+  coffeeImages.setAttribute('src', 'static/coffee_mug.jpg');
+}
+
+coffeeImages.addEventListener('click', makeCoffee);
+
+</script>
 
 </body>
 </html>
